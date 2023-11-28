@@ -1,0 +1,135 @@
+:root{
+    --color-1: hsl(0, 0%, 17%);
+    --color-2: hsl(0, 0%, 59%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.design{
+    width: 100%;
+    height: 35%;
+    background: url('./images/pattern-bg-desktop.png') no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.design h1{
+    position: absolute;
+    top: 5%;
+    color: #fff;
+    font-size: 20px;
+}
+.design input{
+    width: 340px;
+    height: 35px;
+    padding-left: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    border: none;
+}
+.design button{
+    height: 35px;
+    width: 40px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+.design button:hover{
+    background-color: var(--color-1);
+}
+.content-area{
+    width: 75%;
+    min-height: 120px;
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1111;
+}
+.content-area .div{
+    width: calc(100% / 4);
+    height: 100%;
+    padding: 0 10px;
+    border-right: 1px solid var(--color-2);
+    display: flex;
+    flex-direction: column;
+}
+.content-area .div:last-child{
+    border-right: none;
+}
+.content-area p{
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--color-2);
+}
+.content-area h3{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: var(--color-1);
+}
+.map-area{
+    width: 100%;
+    height:400px;
+}
+
+@media screen and (max-width: 900px) {
+    .design{
+        height: 30%;
+        background: url('./images/pattern-bg-mobile.png') no-repeat center / cover;
+}
+.content-area{
+    min-height: 200px;
+    width: 75%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    padding: 10px 0;
+}
+.content-area .div{
+    padding: 0 5px;
+    border-right: none;
+    min-height: calc(200px / 4);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.content-area .div:last-child{
+    border-bottom: none;
+}
+.content-area p{
+    margin-top: 0;
+    text-align: center;
+}
+.content-area h3{
+    margin: 0;
+    text-align: center;
+}
+.map-area{
+    height:800px;
+}
+
+}

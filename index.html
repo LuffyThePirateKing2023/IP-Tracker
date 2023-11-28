@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcs-66-0FH5ArJMsi_Ep8FEwY9K-vvizs&callback=initMap">
+</script>
+
+  <link rel="stylesheet" href="style.css">
+  
+  <title>IP Address Tracker</title>
+</head>
+<body onload= initMap()>
+  <div class="design">
+      <h1>IP Address Tracker</h1>
+      <input type="text" id="input-area" placeholder="Search for any IP address or domain" required>
+      <button id="track-IP">></button>
+  </div>
+  <div class="content-area">
+      <div class="ip-address div">
+          <p>IP Address</p>
+          <h3 id="ip-address"></h3>
+      </div>
+      <div class="location div">
+          <p>Location</p>
+          <h3 id="location"></h3>
+      </div>
+      <div class="timezone div">
+          <p>Time Zone</p>
+          <h3 id="timezone"></h3>
+      </div>
+      <div class="isp div">
+          <p>ISP</p>
+          <h3 id="isp"></h3>
+      </div>
+  </div>
+  <div class="map-area" id="map-area"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
